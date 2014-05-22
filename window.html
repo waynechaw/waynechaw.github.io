@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+	<title>Command Line Interface</title>
+	 <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+	 <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+
+	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+
+</script>
+
+
+
+
+</script>
+
+
+
+
+<style>
+
+p
+{
+	color:black;
+	padding:40px;
+	text-align: center;
+	font-size: 25px;
+}
+
+#intro
+{
+background-image: url(img/window2.jpg);
+background-size: cover; 
+position: fixed;
+top: 68px;
+right: 0;
+left:0;
+bottom:0px;
+}
+
+
+#chart
+{
+background-image: url(img/chart.png);
+position:relative;
+background-color: #F8F8F8 ;
+padding-top:200px;
+z-index: 82;
+height:900px;
+}
+
+
+#information
+{
+background-image: url(img/paper.png);
+position:relative;
+z-index: 81;
+border-width:5px;
+border-color:gray;
+}
+
+#divider
+{
+	width:100%;
+	height:10px;
+	background-image: url(img/carbon.png);
+	box-shadow:         -1px 2px 2px 1px black;
+}
+
+
+body{
+    opacity: 0;
+}
+
+h1
+{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-align: center;
+	font-size:75px;
+	margin-top:130px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+
+<div id="top"></div>
+
+<div id="topcontent">
+
+<img src="img/logo1.png">
+
+<div id="title"> The Command Line Interface</div>
+
+<a href="index.html"><div id="link1" class= "link" >HOME</div></a>
+
+<div id="link2" class= "link" >	WINDOWS</div>
+
+<div id="link3" class= "link">	MAC</div>
+
+<div id="link4" class= "link" >	SCENARIOS</div>
+
+<div id="link5" class= "link" >	ABOUT</div>
+
+</div>
+
+
+<div id="intro" data-0="background-position:0px 0px;" data-100000="background-position:0px -35000px;">
+
+
+
+
+</div>
+
+
+
+<div id="chart">
+
+
+
+</div>
+
+
+
+
+<div id="information">
+
+<div id="divider"></div>
+
+	
+<div style="background-color:gray;position:absolute;bottom:0;width:100%;background-image:url(img/copyright.png);height:25px;">
+	<p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
+		&copy; 2014 by Wayne Chaw 
+	</p>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<script>
+document.getElementById("chart").style.top = window.innerHeight + "px";
+
+
+document.getElementById("information").style.top = window.innerHeight + "px";
+document.getElementById("information").style.height = window.innerHeight + "px";
+
+
+
+
+$("body").delay(0).animate({"opacity": "1"}, 600);
+
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > window.innerHeight) {
+        $('#hiddenlayer').css({
+            'visibility': 'visible'
+        });
+    }
+
+    else if($(this).scrollTop() < window.innerHeight) {
+        $('#hiddenlayer').css({
+            'visibility': 'none'
+        });
+    }
+});
+
+
+</script>
+
+
+
+	
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+
+	<script type="text/javascript">
+	skrollr.init({
+		forceHeight: false
+	});
+	</script>
+
+
+
+<script type="text/javascript">
+function scrollWin() { body.animate({scrollTop:0}, '500'); }
+</script>
+
+<script>
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 700, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background-color: black;
+}
+
+#top {
+  background-image: url(img/top.jpg);
+  width:100%;
+  height: 68px;
+  position: fixed;
+  opacity:0.6;
+  z-index: 100;
+}
+
+
+#topcontent {
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 100px;
+  z-index:101;
+}
+
+#title {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  position: fixed;
+  top: 25px;
+  left: 160px;
+  width: 400px;
+  color: #E6E6E6;
+}
+
+.link {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  position: fixed;
+  color: #E6E6E6;
+  border: 1px white solid;
+  padding: 6px;
+  top: 20px;
+  transition: background-color 1s ease-out;
+  font-size:10px;
+}
+
+
+#link1 {
+  right: 525px;
+}
+
+#link2 {
+  right: 410px;
+}
+
+#link3 {
+  right: 320px;
+}
+
+#link4 {
+  right: 200px;
+}
+
+
+#link5 {
+  right: 100px;
+}
+
+
+div.link:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#firstsection
+{
+background-image: url(img/mac1.jpg);
+background-size: cover; 
+position: fixed;
+top: 68px;
+right: 0;
+left:0;
+bottom:0px;
+}
+
+
+#secondsection
+{
+background-image: url(img/hoffman.png);
+position:relative;
+background-color: #F8F8F8 ;
+padding-top:200px;
+z-index: 82;
+}
+
+
+#thirdsection
+{
+position:relative;
+z-index: 81;
+}
+
+#fourthsection
+{
+background-image: url(img/hoffman.png);
+position:relative;
+z-index: 81;
+padding-top:45px;
+padding-bottom:25px;
+}
+
+
+#hiddenlayer
+{
+background-image: url(img/layer2.jpg);
+background-size: cover; 
+position:fixed;
+color:white;
+height:100%;
+width:100%;
+z-index: 80;
+visibility:hidden;
+}
+
+.copyright
+{
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  opacity:.8;
+}
+
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+
+  .outline2
+ {
+    text-shadow:
+   -1px -1px 0 #B2B2B2,  
+    1px -1px 0 #B2B2B2,
+    -1px 1px 0 #B2B2B2,
+     1px 1px 0 #B2B2B2;
+ }
+
+
+ .outline
+ {
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+ }
+
+  p
+  {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color:white;
+  }
