@@ -88,7 +88,7 @@ bottom:0px;
 
 #secondsection
 {
-background-image: url(img/hoffman.png);
+background-image: url(img/handmadepaper.png);
 position:relative;
 background-color: #F8F8F8 ;
 padding-top:200px;
@@ -145,6 +145,16 @@ a:active {text-decoration:none;}
     -1px 1px 0 #B2B2B2,
      1px 1px 0 #B2B2B2;
  }
+
+   .outline3
+ {
+    text-shadow:
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
+ }
+
 
 
  .outline

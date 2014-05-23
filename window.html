@@ -1,15 +1,12 @@
 <!doctype html>
 <html>
 <head>
-	<title>Command Line Interface</title>
-	 <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <title>Command Line Interface</title>
+   <link rel="stylesheet" type="text/css" href="mystyle.css">
 
-	 <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
-
-	 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-
 </script>
 
 
@@ -22,17 +19,11 @@
 
 <style>
 
-p
-{
-	color:black;
-	padding:40px;
-	text-align: center;
-	font-size: 25px;
-}
+
 
 #intro
 {
-background-image: url(img/window2.jpg);
+background-image: url(img/window1.jpg);
 background-size: cover; 
 position: fixed;
 top: 68px;
@@ -47,9 +38,8 @@ bottom:0px;
 background-image: url(img/chart.png);
 position:relative;
 background-color: #F8F8F8 ;
-padding-top:200px;
+padding-top:50px;
 z-index: 82;
-height:900px;
 }
 
 
@@ -58,16 +48,17 @@ height:900px;
 background-image: url(img/paper.png);
 position:relative;
 z-index: 81;
-border-width:5px;
 border-color:gray;
+padding-bottom:100px;
 }
 
 #divider
 {
-	width:100%;
-	height:10px;
-	background-image: url(img/carbon.png);
-	box-shadow:         -1px 2px 2px 1px black;
+  width:100%;
+  height:10px;
+  background-image: url(img/carbon.png);
+  box-shadow:         -1px 3px  10px 2px #333329;
+  margin-bottom:50px;
 }
 
 
@@ -75,15 +66,86 @@ body{
     opacity: 0;
 }
 
-h1
+
+#introcontent
 {
-	font-family: 'Alegreya Sans SC', sans-serif;
-	text-align: center;
-	font-size:75px;
-	margin-top:130px;
+  color:black;
+  padding:40px;
+  text-align: center;
+  font-size: 25px;
+  width:700px;
+  margin:auto;
+  text-align: justify;
 }
 
 
+h1
+{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: center;
+  font-size:75px;
+  margin-top:130px;
+}
+
+table { 
+  background-color: white;
+  font-family: 'Arial';
+  margin: 25px auto;
+  border-collapse: collapse;
+  border-bottom: 3px solid#7D7D7D;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+     margin-bottom:50px;
+    }
+
+
+  th, td {
+    color: #666666;
+    border: 1px solid #DADADA;
+    padding: 12px 35px;
+  }
+  th {
+    background: #7D7D7D;
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+tr{
+    background-color: white;
+}
+
+tr:hover {
+          background-color: #CCCCCC;
+          cursor: pointer;
+    }
+
+    tr#tablehead:hover {
+          background-color: #CCCCCC;
+          cursor: default;
+    }
+
+
+h2
+{ font-family: 'Alegreya Sans SC', sans-serif;
+
+  text-align: center;
+  font-size: 30px;
+  color: #333329;
+  }
+
+h3
+{
+  text-align:center;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+.example
+{
+  color:black;
+}
 
 </style>
 
@@ -101,21 +163,22 @@ h1
 
 <a href="index.html"><div id="link1" class= "link" >HOME</div></a>
 
-<div id="link2" class= "link" >	WINDOWS</div>
+<a href=""><div id="link2" class= "link" >  WINDOWS</div></a>
 
-<div id="link3" class= "link">	MAC</div>
+<div id="link3" class= "link">  MAC</div>
 
-<div id="link4" class= "link" >	SCENARIOS</div>
+<div id="link4" class= "link" > SCENARIOS</div>
 
-<div id="link5" class= "link" >	ABOUT</div>
+<div id="link5" class= "link" > ABOUT</div>
 
 </div>
 
 
 <div id="intro" data-0="background-position:0px 0px;" data-100000="background-position:0px -35000px;">
 
+<h1>The Command Prompt</h1>
 
-
+<p id="introcontent" class="outline3"> You can access the Command Prompt by searching for "cmd" in the Start Menu. The commands that the Command Prompt uses are called DOS commands. Note that directory is another term for folder. Scroll down for a table of important DOS commands and click on the commands for further information.</p>
 
 </div>
 
@@ -123,27 +186,122 @@ h1
 
 <div id="chart">
 
+<h2>Essential DOS Commands</h2>
 
+<table>
+    <tr id="tablehead">
+      <th>Command</th>
+      <th>Descripton</th>
+    </tr>
+    <tr class='clickableRow' href="#cd">
+      <td>cd</td>
+      <td>Change directory</td>
+    </tr>
+     <tr>
+      <td>cd..</td>
+      <td>Move to parent directory</td>
+    </tr>
+     <tr>
+      <td>cd\</td>
+      <td>Move to root directory</td>
+    </tr>
+     <tr>
+      <td>cls</td>
+      <td>Clear the Command Prompt</td>
+    </tr>
+     <tr>
+      <td>copy</td>
+      <td>Copy file</td>
+    </tr>
+     <tr>
+      <td>del</td>
+      <td>Delete file</td>
+    </tr>
+     <tr>
+      <td>erase</td>
+      <td>Delete file</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>Erase entire drive</td>
+    </tr>
 
-</div>
+     <tr>
+      <td>dir</td>
+      <td>List files and folders</td>
+    </tr>
+     <tr>
+      <td>dir /ad</td>
+      <td>List directories only</td>
+    </tr>
+     <tr>
+      <td>dir /p</td>
+      <td>List files one page at a time</td>
+    </tr>
+     <tr>
+      <td>>dir /w</td>
+      <td>List files and directories <br>horizontally with less information</td>
+    </tr>
+
+ 
+     <tr>
+      <td>md</td>
+      <td>Make directory</td>
+    </tr>
+
+     <tr>
+      <td>move</td>
+      <td>Move file</td>
+    </tr>
+     <tr>
+      <td>rd</td>
+      <td>Remove Directory</td>
+    </tr>
+
+     <tr>
+      <td>ren</td>
+      <td>Rename</td>
+    </tr>
+     <tr>
+      <td><em>driveletter</em>:</td>
+      <td>Move to specified drive</td>
+    </tr>
+
+     <tr>
+      <td>*</td>
+      <td>Wildcard</td>
+    </tr>
+</table>
 
 
 
 
 <div id="information">
-
 <div id="divider"></div>
 
-	
+<h3>CD</h3>
+
+<p id="cd" class="example">CD is the command used for changing directory</p>
+
+
+  
 <div style="background-color:gray;position:absolute;bottom:0;width:100%;background-image:url(img/copyright.png);height:25px;">
-	<p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
-		&copy; 2014 by Wayne Chaw 
-	</p>
+  <p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
+    &copy; 2014 by Wayne Chaw 
+  </p>
 </div>
 
 
 
 </div>
+
+
+
+</div>
+
+
+
+
 
 
 
@@ -154,8 +312,7 @@ h1
 document.getElementById("chart").style.top = window.innerHeight + "px";
 
 
-document.getElementById("information").style.top = window.innerHeight + "px";
-document.getElementById("information").style.height = window.innerHeight + "px";
+
 
 
 
@@ -183,15 +340,15 @@ $(window).scroll(function() {
 
 
 
-	
+  
 <script type="text/javascript" src="skrollr.min.js"></script>
 
 
-	<script type="text/javascript">
-	skrollr.init({
-		forceHeight: false
-	});
-	</script>
+  <script type="text/javascript">
+  skrollr.init({
+    forceHeight: false
+  });
+  </script>
 
 
 
@@ -201,22 +358,30 @@ function scrollWin() { body.animate({scrollTop:0}, '500'); }
 
 <script>
 $(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+  $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
 
-	    var target = this.hash,
-	    $target = $(target);
+      var target = this.hash,
+      $target = $(target);
 
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 700, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 700, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
 });
 </script>
 
+<script>
 
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+
+</script>
 
 </body>
 </html>
