@@ -50,6 +50,7 @@ position:relative;
 z-index: 81;
 border-color:gray;
 padding-bottom:100px;
+text-align: center;
 }
 
 #divider
@@ -140,14 +141,63 @@ h3
 {
   text-align:center;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 35px;
+  margin-bottom:20px;
 }
 
 .example
 {
   color:black;
+  text-align: justify;
+  margin:25px;
+}
+
+.command{
+  font-weight: 300;
+  color:gray;
+}
+
+.syntax{
+  display:inline-block;
+  text-align: left;
+  color:black;
+    margin-left:25px;
+}
+}
+
+.text{
+  display:inline;
+}
+
+.right{
+  background-image: url('img/orch.png');
+  text-align:left;
+  border:3px #333333 solid;
+  padding:5px;
+  float:right;width:450px;height:280px;
+}
+
+.left{
+  background-color: #E2E2E2;float:left;width:450px;height:300px;text-align:left;
+}
+.code{
+
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size:12px;
+}
+
+.contain
+{
+  width:950px;margin-left:auto;margin-right:auto;
+}
+
+.anchor
+{
+  height:70px;
 }
 
 </style>
+
 
 </head>
 <body>
@@ -165,11 +215,11 @@ h3
 
 <a href=""><div id="link2" class= "link" >  WINDOWS</div></a>
 
-<div id="link3" class= "link">  MAC</div>
+<a href="mac.html"><div id="link3" class= "link">  MAC</div></a>
 
-<div id="link4" class= "link" > SCENARIOS</div>
+<a href="scenario.html"><div id="link4" class= "link" > SCENARIOS</div></a>
 
-<div id="link5" class= "link" > ABOUT</div>
+<a href="http://www.yearup.org/"><div id="link5" class= "link" >  ABOUT</div></a>
 
 </div>
 
@@ -178,7 +228,7 @@ h3
 
 <h1>The Command Prompt</h1>
 
-<p id="introcontent" class="outline3"> You can access the Command Prompt by searching for "cmd" in the Start Menu. The commands that the Command Prompt uses are called DOS commands. Note that directory is another term for folder. Scroll down for a table of important DOS commands and click on the commands for further information.</p>
+<p id="introcontent" class="outline3"> You can access the Command Prompt by searching for "cmd" in the Start Menu. The commands that the Command Prompt uses are called DOS commands. Note that directory is another term for folder and capitalization does not matter. Scroll down for a table of important DOS commands and click on the commands for further information.</p>
 
 </div>
 
@@ -197,77 +247,81 @@ h3
       <td>cd</td>
       <td>Change directory</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#cd2">
       <td>cd..</td>
       <td>Move to parent directory</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#cd3">
       <td>cd\</td>
       <td>Move to root directory</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#cls">
       <td>cls</td>
       <td>Clear the Command Prompt</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#copy">
       <td>copy</td>
       <td>Copy file</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#del">
       <td>del</td>
       <td>Delete file</td>
     </tr>
-     <tr>
+
+         <tr class='clickableRow' href="#del">
       <td>erase</td>
       <td>Delete file</td>
     </tr>
-    <tr>
+
+
+    <tr class='clickableRow' href="#format">
       <td>format</td>
       <td>Erase entire drive</td>
     </tr>
 
-     <tr>
+     <tr class='clickableRow' href="#dir">
       <td>dir</td>
       <td>List files and folders</td>
     </tr>
-     <tr>
-      <td>dir /ad</td>
-      <td>List directories only</td>
-    </tr>
-     <tr>
+         <tr class='clickableRow' href="#dir2">
       <td>dir /p</td>
       <td>List files one page at a time</td>
     </tr>
-     <tr>
-      <td>>dir /w</td>
+     <tr class='clickableRow' href="#dir3">
+      <td>dir /ad</td>
+      <td>List directories only</td>
+    </tr>
+
+     <tr class='clickableRow' href="#dir4">
+      <td>dir /w</td>
       <td>List files and directories <br>horizontally with less information</td>
     </tr>
 
  
-     <tr>
+     <tr class='clickableRow' href="#md">
       <td>md</td>
       <td>Make directory</td>
     </tr>
 
-     <tr>
+     <tr class='clickableRow' href="#move">
       <td>move</td>
       <td>Move file</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#rd">
       <td>rd</td>
       <td>Remove Directory</td>
     </tr>
 
-     <tr>
+     <tr class='clickableRow' href="#ren">
       <td>ren</td>
       <td>Rename</td>
     </tr>
-     <tr>
+     <tr class='clickableRow' href="#drive">
       <td><em>driveletter</em>:</td>
       <td>Move to specified drive</td>
     </tr>
 
-     <tr>
+     <tr class='clickableRow' href="#wild">
       <td>*</td>
       <td>Wildcard</td>
     </tr>
@@ -279,11 +333,589 @@ h3
 <div id="information">
 <div id="divider"></div>
 
-<h3>CD</h3>
+<div class="contain">
 
-<p id="cd" class="example">CD is the command used for changing directory</p>
+<div id="cd" class="anchor"></div>
+
+<h3>cd</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">cd</span> is the command used for changing directory. First type <span class="command">cd</span> followed by the location of the folder you want to go to.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd <em>destination</em></span>
+
+<p class="example">In the example, I started at the root directory. I changed to the Users directory by typing <span class="command">cd user</span>. Next, I changed to the "Wayne" directory under "Users" by typing <span class="command">cd Wayne</span>. Finally, I demonstrated that you can change to a directory two levels below your current location by typing the parent directory first followed by the child directory such as <span class="command">desktop\yearup</span>.</p>
+
+</div>
+
+<div class="right">
+<p class="code">C:\>_</p>
+<p class="code">C:\>cd users</p>
+<p class="code">C:\Users>cd wayne</p>
+<p class="code">C:\Users\Wayne>cd desktop\yearup</p>
+<p class="code">C:\Users\Wayne\Desktop\yearup>_</p>
 
 
+</div>
+
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+<div id="cd2" class="anchor"></div>
+
+<h3>cd..</h3>
+
+<div class="left">
+
+<p  class="example"><span class="command">cd..</span> is the command used for moving up a directory because <span class="command">..</span> represents the location of the parent directory of the command prompt's current location. Thus, <span class="command">cd..</span> changes command prompt's location to the parent directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd..</span>
+
+<p class="example">In the example, I started at the directory:<br> C:\Users\Wayne\Desktop\yearup. Everytime I entered the command <span class="command">cd..</span> I moved up a directory until I got to the root directory.</p>
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\Users\Wayne\Desktop\yearup>cd..</p>
+<p class="code">C:\Users\Wayne\Desktop>cd..</p>
+<p class="code">C:\Users\Wayne>cd..</p>
+<p class="code">C:\Users>cd..</p>
+<p class="code">C:\>_</p>
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+  <div id="cd3" class="anchor"></div>
+
+<h3>cd\</h3>
+
+<div class="left">
+
+<p  class="example"><span class="command">cd\</span> is the command used for moving to the root of the drive you are in.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd\</span>
+
+<p class="example">In the example, I started at the directory:<br> C:\Users\Wayne\Desktop\yearup. Simply entering <span class="command">cd\</span> I moved to the root of the C drive </p>
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\Users\Wayne\Desktop\yearup>cd\</p>
+<p class="code">C:\>_</p>
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="cls" class="anchor"></div>
+
+<h3>cls</h3>
+
+<div class="left">
+
+<p  class="example">If there is a lot of text on your command prompt and you want to clear it all, type <span class="command">cls</span> to clear the screen.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cls</span>
+
+<p  class="example">After you enter <span class="command">cls</span>, you will see a screen similar to the example.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\>_</p>
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="copy" class="anchor"></div>
+
+<h3>copy</h3>
+
+<div class="left">
+
+<p  class="example">The <span class="command">copy</span> command allows you to duplicate a file and place the copy of the file in a different location.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> copy <em>source</em> <em>destination</em></span>
+
+<p  class="example">My command prompt started at the root of C drive. I navigated to the Wayne directory by using the <span class="command">cd </span> command. <span class="command">copy cmd.txt desktop</span> copies the cmd.txt file from the Wayne directory to the desktop. Next, I copy the new file in desktop to the parent directory of Wayne, which is Users. It copied to Users because <span class="command">.. </span> represents the parent of current location.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\>cd users</p>
+<p class="code">C:\Users>cd Wayne</p>
+<p class="code">C:\Users\Wayne>copy cmd.txt desktop</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 file(s) copied.</p>
+<p class="code">C:\Users\Wayne>copy desktop\cmd.txt ..</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 file(s) copied.</p>
+<p class="code">C:\Users\Wayne>_</p>
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="del" class="anchor"></div>
+
+<h3>del & erase</h3>
+
+<div class="left">
+
+<p class="example">Both the <span class="command">del</span> and  <span class="command">erase</span> commands delete file.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> del <em>source</em></span>
+<p class="syntax">Syntax: </p><span class="text"> erase <em>source</em> </span>
+
+<p class="example">In the example, I used both the <span class="command">del</span> command and the <span class="command">erase</span> command to delete the text files created in the copy example.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\>cd users</p>
+<p class="code">C:\Users>del cmd.txt</p>
+<p class="code">C:\Users>erase wayne\desktop\cmd.txt</p>
+<p class="code">C:\Users>_</p>
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+  <div id="format" class="anchor"></div>
+
+<h3>format</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">format</span> command erases everything on the drive specified</p>
+
+<p class="syntax">Syntax: </p><span class="text"> format <em>driveletter</em>:</span>
+
+
+<p class="example">In the example, the command <span class="command">format d:</span> would erase all data of my D drive</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\>format d:</p>
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+  <div id="dir" class="anchor"></div>
+
+<h3>dir</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">dir</span> command displays files and folders within the current directory</p>
+
+<p class="syntax">Syntax: </p><span class="text"> dir <em>source</em></span>
+
+
+<p class="example">In the example, I typed <span class="command">dir</span> followed by the location of the directory named "cmd" located in a directory named "website" on my desktop. The command prompt will display all files and directories inside and the size of each file.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\Users\Wayne>dir desktop/website/cmd</p>
+<p class="code">&nbsp;&nbsp;Volume in drive C has no label</p>
+<p class="code">&nbsp;&nbsp;Volume Serial Number is C260-B1B8</p>
+<br>
+<p class="code">Directory of C:\Users\Wayne\desktop\website\cmd</p>
+<br>
+<p class="code">05/23/2014&nbsp;&nbsp;06:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>
+<p class="code">05/23/2014&nbsp;&nbsp;06:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..</p>
+<p class="code">05/23/2014&nbsp;&nbsp;07:51 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img</p>
+<p class="code">05/23/2014&nbsp;&nbsp;06:46 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7,063 index.html</p>
+<p class="code">05/23/2014&nbsp;&nbsp;08:23 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,500 mystyle.css</p>
+<p class="code">05/24/2014&nbsp;&nbsp;01:49 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13,674 window.html</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 File(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23,237 bytes</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Dir(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300,987,457,536 bytes free</p>
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+
+<div class="contain">
+
+  <div id="dir2" class="anchor"></div>
+
+<h3>dir /p</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">dir /p</span> command displays files and folders one page at a time.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> dir /p <em>source</em></span>
+
+
+<p class="example"><span class="command">dir /p</span> command is used when a directory has a lot of files and folders. I used the "Windows" directory as my example. In the example, the command prompt will prompt you to press any key to continue when its listing fills up the window. When you press any key, command prompt will print the next set of files and folders.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\Windows>dir /p .</p>
+<p class="code">&nbsp;&nbsp;Volume in drive C has no label</p>
+<p class="code">&nbsp;&nbsp;Volume Serial Number is C260-B1B8</p>
+<br>
+<p class="code">Directory of C:\Windows</p>
+<br>
+<p class="code">04/23/2014&nbsp;&nbsp;03:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>
+<p class="code">04/23/2014&nbsp;&nbsp;08:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..</p>
+<p class="code">08/23/2013&nbsp;&nbsp;07:21 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addins</p>
+<p class="code">05/16/2014&nbsp;&nbsp;07:51 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Camera</p>
+<p class="code">05/23/2014&nbsp;&nbsp;08:23 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,373,784 explorer.exe</p>
+<p class="code">05/02/2014&nbsp;&nbsp;08:23 PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;973,312 HelpPane.exe</p>
+<p class="code">05/22/2014&nbsp;&nbsp;07:51 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft.NET</p>
+<p class="code">Press any key to continue . . .</p>
+
+
+
+
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+  <div id="dir3" class="anchor"></div>
+
+<h3>dir /ad</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">dir /ad</span> command displays only the folders in the directory specified</p>
+
+<p class="syntax">Syntax: </p><span class="text"> dir /ad <em>source</em></span>
+
+
+<p class="example">In the example, I typed <span class="command">dir /ad</span> followed by the same location of directory as the dir example. However, this time it only listed the folders.</p>
+
+
+</div>
+
+<div class="right">
+
+<p class="code">C:\Users\Wayne>dir /ad desktop/website/cmd</p>
+<p class="code">&nbsp;&nbsp;Volume in drive C has no label</p>
+<p class="code">&nbsp;&nbsp;Volume Serial Number is C260-B1B8</p>
+<br>
+<p class="code">Directory of C:\Users\Wayne\desktop\website\cmd</p>
+<br>
+<p class="code">05/23/2014&nbsp;&nbsp;06:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>
+<p class="code">05/23/2014&nbsp;&nbsp;06:40 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..</p>
+<p class="code">05/23/2014&nbsp;&nbsp;07:51 PM&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img</p>
+
+
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 File(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 bytes</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 Dir(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300,987,457,536 bytes free</p>
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+  <div id="dir4" class="anchor"></div>
+
+<h3>dir /w</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">dir /w</span> command displays only the name of each file and folder without other information in two columns.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> dir /w <em>source</em></span>
+
+
+<p class="example"> I typed <span class="command">dir /w .</span> after navigating to the "yearup" directory on my desktop to display the content of the directory in a short format. As you can see, the command prompt listed the items in two columns and does not show dates or file sizes of each item. Directories' names are in square brackets.</p>
+
+
+</div>
+
+<div class="right">
+<p class="code">C:\>cd Users\Wayne\Desktop\yearup</p>
+<p class="code">C:\Users\Wayne\Desktop\yearup>dir /w .</p>
+<p class="code">&nbsp;&nbsp;Volume in drive C has no label</p>
+<p class="code">&nbsp;&nbsp;Volume Serial Number is C260-B1B8</p>
+<br>
+<p class="code">Directory of C:\Users\Wayne\desktop\yearup</p>
+<br>
+<p class="code">[.]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[..]<br>
+abby.docx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BC.doc<br>
+BC.odt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calendar.docx<br>
+[javascript] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obama.html<br>
+outlook.docx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[pig]</p>
+
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 File(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,072,449 bytes</p>
+<p class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 Dir(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;300,987,457,536 bytes free</p>
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="md" class="anchor"></div>
+
+<h3>md</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">md</span> command creates a directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> md <em>destination</em></span>
+
+
+<p class="example"> With the command prompt at the desktop directory, I type <span class="command">md firstfolder</span>, I created a folder on my desktop called "firstfolder". Next, I enter <span class="command">md firstfolder\secondfolder</span> to create another folder inside the folder I created.</p>
+
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>md firstfolder</p>
+<p class="code">C:\Users\Wayne\Desktop>md firstfolder\secondfolder</p>
+
+
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="move" class="anchor"></div>
+
+<h3>move</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">move</span> command moves a directory or file.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> move <em>source destination</em></span>
+
+
+<p class="example"> In the example, I moved the text file "grade.txt" from my desktop to the folder "myfolder" that is on my desktop. Next, I moved "grade.txt" to the parent directory of the desktop. Finally, I moved the folder from the desktop to the parent directory of the desktop.</p>
+
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>move grade.txt myfolder<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 file(s) moved.<br><br>
+C:\Users\Wayne\Desktop>move myfolder\grade.txt ..<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 file(s) moved<br><br>
+C:\Users\Wayne\Desktop>move myfolder ..<br>       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 dir(s) moved<br><br>
+C:\Users\Wayne\Desktop>_
+</p>
+
+
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+  <div id="rd" class="anchor"></div>
+
+<h3>rd</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">rd</span> command deletes directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> rd <em>source</em></span>
+
+
+<p class="example"> In the example, my command prompt's location is at the desktop. By typing <span class="command">rd emptyfolder</span>, I remove the folder named emptyfolder on my desktop.</p>
+
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>rd emptyfolder<br>
+C:\Users\Wayne\Desktop>_
+</p>
+
+
+
+
+
+
+</div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+  <div id="ren" class="anchor"></div>
+<h3>ren</h3>
+
+<div class="left">
+
+<p class="example">The <span class="command">ren</span> command rename files or directories.</p>
+<p class="syntax">Syntax: </p><span class="text"> ren <em>source newname</em></span>
+
+
+<p class="example"> In the example, I renamed logo.png to icon.png and then renamed the oldfolder directory to newfolder. </p>
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>ren logo.png icon.png<br>
+C:\Users\Wayne\Desktop>ren oldfolder newfolder<br>
+C:\Users\Wayne\Desktop>_
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+  <div id="drive" class="anchor"></div>
+<h3><em>driveletter</em>:</h3>
+
+<div class="left">
+
+<p class="example">If there is another drive on your computer, you can change your command prompt's location to the root of that drive by typing the drive letter of the drive you want to change to followed by semicolon.</p>
+<p class="syntax">Syntax: </p><span class="text"> <em>driveletter</em>:</span>
+
+
+<p class="example"> In the example, I jumped to the D drive by typing <span class="command">d:</span> This will work no matter where the command prompt is currently at.  </p>
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>d:<br>
+D:\>_
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+<div class="contain">
+  <div id="wild" class="anchor"></div>
+<h3>*</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">*</span> represents a wildcard. This means the <span class="command">*</span> character can be used to substitute any character. With this technique, you can perform action on multiple files at once.</p>
+<p class="syntax">Syntax: </p><span class="text">*</span>
+
+
+<p class="example"> In the example, I moved all files from the "newfolder" directory to the desktop. Next, I delete all files with the .txt extention on my desktop.  </p>
+
+</div>
+
+<div class="right">
+<p class="code">C:\Users\Wayne\Desktop>move newfolder\*.* .<br>
+C:\Users\Wayne\Desktop>del *.txt
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
   
 <div style="background-color:gray;position:absolute;bottom:0;width:100%;background-image:url(img/copyright.png);height:25px;">
   <p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
@@ -321,20 +953,6 @@ $("body").delay(0).animate({"opacity": "1"}, 600);
 
 
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > window.innerHeight) {
-        $('#hiddenlayer').css({
-            'visibility': 'visible'
-        });
-    }
-
-    else if($(this).scrollTop() < window.innerHeight) {
-        $('#hiddenlayer').css({
-            'visibility': 'none'
-        });
-    }
-});
-
 
 </script>
 
@@ -352,26 +970,7 @@ $(window).scroll(function() {
 
 
 
-<script type="text/javascript">
-function scrollWin() { body.animate({scrollTop:0}, '500'); }
-</script>
 
-<script>
-$(document).ready(function(){
-  $('a[href^="#"]').on('click',function (e) {
-      e.preventDefault();
-
-      var target = this.hash,
-      $target = $(target);
-
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top
-      }, 700, 'swing', function () {
-          window.location.hash = target;
-      });
-  });
-});
-</script>
 
 <script>
 
@@ -382,6 +981,7 @@ jQuery(document).ready(function($) {
 });
 
 </script>
+
 
 </body>
 </html>

@@ -1,0 +1,826 @@
+<!doctype html>
+<html>
+<head>
+  <title>Command Line Interface</title>
+   <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+
+
+
+
+</script>
+
+
+
+
+<style>
+
+
+
+#intro
+{
+background-image: url(img/macbg.jpg);
+background-size: cover; 
+position: fixed;
+top: 68px;
+right: 0;
+left:0;
+bottom:0px;
+}
+
+
+#chart
+{
+background-image: url(img/chart.png);
+position:relative;
+background-color: #F8F8F8 ;
+padding-top:50px;
+z-index: 82;
+}
+
+
+#information
+{
+background-image: url(img/paper.png);
+position:relative;
+z-index: 81;
+border-color:gray;
+padding-bottom:100px;
+text-align: center;
+}
+
+#divider
+{
+  width:100%;
+  height:10px;
+  background-image: url(img/carbon.png);
+  box-shadow:         -1px 3px  10px 2px #333329;
+  margin-bottom:50px;
+}
+
+
+body{
+    opacity: 0;
+}
+
+
+#introcontent
+{
+  color:black;
+  padding:40px;
+  text-align: center;
+  font-size: 25px;
+  width:700px;
+  margin:auto;
+  text-align: justify;
+}
+
+
+h1
+{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: center;
+  font-size:75px;
+  margin-top:130px;
+  color:white;
+}
+
+table { 
+  background-color: white;
+  font-family: 'Arial';
+  margin: 25px auto;
+  border-collapse: collapse;
+  border-bottom: 3px solid#7D7D7D;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+     margin-bottom:50px;
+    }
+
+
+  th, td {
+    color: #666666;
+    border: 1px solid #DADADA;
+    padding: 12px 35px;
+  }
+  th {
+    background: #7D7D7D;
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+tr{
+    background-color: white;
+}
+
+tr:hover {
+          background-color: #CCCCCC;
+          cursor: pointer;
+    }
+
+    tr#tablehead:hover {
+          background-color: #CCCCCC;
+          cursor: default;
+    }
+
+
+h2
+{ font-family: 'Alegreya Sans SC', sans-serif;
+
+  text-align: center;
+  font-size: 30px;
+  color: #333329;
+  }
+
+h3
+{
+  text-align:center;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 35px;
+  margin-bottom:20px;
+}
+
+.example
+{
+  color:black;
+  text-align: justify;
+  margin:25px;
+}
+
+.command{
+  font-weight: 300;
+  color:gray;
+}
+
+.syntax{
+  display:inline-block;
+  text-align: left;
+  color:black;
+    margin-left:25px;
+}
+}
+
+.text{
+  display:inline;
+}
+
+.right{
+  background-image: url('img/deb.png');
+  text-align:left;
+  border:3px #333333 solid;
+  padding:5px;
+  float:right;width:450px;height:280px;
+}
+
+.left{
+  background-color: #E2E2E2;float:left;width:450px;height:300px;text-align:left;
+}
+.code{
+
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size:12px;
+}
+
+.contain
+{
+  width:950px;margin-left:auto;margin-right:auto;
+}
+
+.anchor
+{
+  height:70px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div id="top"></div>
+
+<div id="topcontent">
+
+<img src="img/logo2.png">
+
+<div id="title"> The Command Line Interface</div>
+
+<a href="index.html"><div id="link1" class= "link" >HOME</div></a>
+
+<a href="window.html"><div id="link2" class= "link" >  WINDOWS</div></a>
+
+<a href=""><div id="link3" class= "link">  MAC</div></a>
+
+<a href="scenario.html"><div id="link4" class= "link" > SCENARIOS</div></a>
+
+<a href="http://www.yearup.org/"><div id="link5" class= "link" >  ABOUT</div></a>
+
+</div>
+
+
+<div id="intro" data-0="background-position:0px 0px;" data-100000="background-position:0px -35000px;">
+
+<h1>The Terminal</h1>
+
+<p id="introcontent" class="outline3"> You can access the Terminal by searching for "terminal" in the Spotlight search field. Scroll down for a table of important Terminal commands and click on the commands for further information.</p>
+
+</div>
+
+
+
+<div id="chart">
+
+<h2>Essential Terminal Commands</h2>
+
+<table>
+    <tr id="tablehead">
+      <th>Command</th>
+      <th>Descripton</th>
+    </tr>
+    <tr class='clickableRow' href="#cd">
+      <td>cd</td>
+      <td>Change directory or change to user's<br> home directory without location added</td>
+    </tr>
+     <tr class='clickableRow' href="#cd2">
+      <td>cd ..</td>
+      <td>Move to parent directory</td>
+    </tr>
+     <tr class='clickableRow' href="#cd3">
+      <td>cd /</td>
+      <td>Move to root directory</td>
+    </tr>
+     <tr class='clickableRow' href="#cd4">
+      <td>cd ~</td>
+      <td>Move to user's home directory</td>
+    </tr>
+     <tr class='clickableRow' href="#clear">
+      <td>clear</td>
+      <td>Clear screen</td>
+    </tr>
+     <tr class='clickableRow' href="#cp">
+      <td>cp</td>
+      <td>copy file</td>
+    </tr>
+
+         <tr class='clickableRow' href="#disk">
+      <td>diskutil list</td>
+      <td>List all disks, their sizes and identifiers</td>
+    </tr>
+
+
+    <tr class='clickableRow' href="#ls">
+      <td>ls</td>
+      <td>List all files and folders</td>
+    </tr>
+
+        <tr class='clickableRow' href="#ls2">
+      <td>ls -a</td>
+      <td>List all files including hidden files</td>
+    </tr>
+
+     <tr class='clickableRow' href="#ls3">
+      <td>ls -d */</td>
+      <td>List only directories</td>
+    </tr>
+         <tr class='clickableRow' href="#mkdir">
+      <td>mkdir</td>
+      <td>Make directory</td>
+    </tr>
+     <tr class='clickableRow' href="#mount">
+      <td>mount</td>
+      <td>Mount drive</td>
+    </tr>
+
+     <tr class='clickableRow' href="#mv">
+      <td>mv</td>
+      <td>Move files or folders</td>
+    </tr>
+
+ 
+     <tr class='clickableRow' href="#pwd">
+      <td>pwd</td>
+      <td>Display current location</td>
+    </tr>
+
+     <tr class='clickableRow' href="#rm">
+      <td>rm</td>
+      <td>Delete file</td>
+    </tr>
+     <tr class='clickableRow' href="#rmdir">
+      <td>rmdir</td>
+      <td>Remove Directory</td>
+    </tr>
+
+     <tr class='clickableRow' href="#rm2">
+      <td>rm -r</td>
+      <td>Remove directory and its content</td>
+    </tr>
+     <tr class='clickableRow' href="#wild">
+      <td><em>*</em>:</td>
+      <td>Wildcard</td>
+    </tr>
+</table>
+
+
+
+
+<div id="information">
+<div id="divider"></div>
+
+<div class="contain">
+
+<div id="cd" class="anchor"></div>
+
+<h3>cd</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">cd</span> is the command used for changing directory. First type <span class="command">cd</span> followed by the location of the folder you want to go to. You can also type cd without any arguments to change to the user's home directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd <em>destination</em></span>
+
+<p class="example">In the example, I started at the root directory. I changed to my home directory by typing <span class="command">cd</span>. Next, I changed to my desktop my typing <span class="command">cd Desktop</span> Finally, I print the current location of the terminal with the <span class="command">pwd</span> command to confirm I am currently at my desktop in terminal.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ cd</p>
+<p class="code">$ cd Desktop</p>
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne/Desktop</p>
+
+</div>
+
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+<div id="cd2" class="anchor"></div>
+
+<h3>cd ..</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">cd ..</span> is the command used for changing to the parent directory of the current directory. This is because <span class="command">..</span> represents the location of the parent directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd ..</span>
+
+<p class="example">In the example, I started at the desktop. I entered <span class="command">cd ..</span> to move to the home directory.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne/desktop</p>
+<p class="code">$ cd ..</p>
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne</p>
+
+
+</div>
+
+
+<div style="clear:both"></div>
+
+</div>
+
+<div class="contain">
+
+<div id="cd3" class="anchor"></div>
+
+<h3>cd /</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">cd /</span> is the command used for changing to the root directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd /</span>
+
+<p class="example">In the example, I started at the desktop. I entered <span class="command">cd /</span> to move to the root directory.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ cd /</p>
+<p class="code">$ pwd</p>
+<p class="code">/</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+
+<div id="cd4" class="anchor"></div>
+
+<h3>cd ~</h3>
+
+<div class="left">
+
+<p class="example"><span class="command">cd ~</span> is the command used for changing to the user's home directory.</p>
+
+<p class="syntax">Syntax: </p><span class="text"> cd ~</span>
+
+<p class="example">In the example, I started at the root directory. I entered <span class="command">cd ~</span> to move to my home directory directory.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ pwd</p>
+<p class="code">/</p>
+<p class="code">$ cd ~</p>
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="clear" class="anchor"></div>
+<h3>clear</h3>
+<div class="left">
+
+<p class="example"><span class="command">clear</span> is the command to clear the screen.</p>
+<p class="syntax">Syntax: </p><span class="text"> clear</span>
+<p class="example">After you enter <span class="command">clear</span>, you will see a screen similar to the example.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ </p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="cp" class="anchor"></div>
+<h3>cp</h3>
+<div class="left">
+
+<p class="example"><span class="command">cp</span> is the command to copy a file.</p>
+<p class="syntax">Syntax: </p><span class="text"> cp <em>source destination</em></span>
+<p class="example">In the example, there is a picture named "mypic.png" on my desktop. I navigate to my desktop within the Terminal with the command <span class="command">cd ~/Desktop</span>. Next, I copied the picture and named the duplicate "mypic2.png". Finally, I duplicated the picture again but placed it in my home directory.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ cd ~/Desktop</p>
+<p class="code">$ cp mypic.png mypic2.png</p>
+<p class="code">$ cp mypic.png ../mypic3.png</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="disk" class="anchor"></div>
+<h3>diskutil list</h3>
+<div class="left">
+
+<p class="example"><span class="command">diskutil list</span> is the command to list all disks, their sizes and identifiers.</p>
+<p class="syntax">Syntax: </p><span class="text"> diskutil list</span>
+<p class="example">The example shows a sample output of <span class="command">diskutil list</span></p>
+
+</div>
+
+<div class="right">
+<p class="code">$ diskutil list</p>
+<p class="code"> &nbsp;#:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TYPE&nbsp;&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIZE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDENTIFIER</p>
+<p class="code"> &nbsp;0:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EFI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;209.7 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disk0</p>
+<p class="code"> &nbsp;1:&nbsp;&nbsp;&nbsp;&nbsp;Apple_HFS &nbsp;Machintosh&nbsp;&nbsp;&nbsp;&nbsp;319.7 GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disk0s1</p>
+<p class="code"> &nbsp;2:&nbsp;&nbsp;&nbsp;Apple_Boot &nbsp;Recovery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;650.0 MB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disk0s2</p>
+
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="ls" class="anchor"></div>
+<h3>ls</h3>
+<div class="left">
+
+<p class="example"><span class="command">ls</span> is the command to list all files and folders. You can add a location or simply type <span class="command">ls</span>  to display the content of current location.</p>
+<p class="syntax">Syntax: </p><span class="text"> ls <em>source</em></span>
+<p class="example">In the example, I am currently at my desktop at the Terminal. I typed <span class="command">ls ..</span> to list the items in my home directory. Next, I list the items in my desktop.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls ..</p>
+<p class="code">Desktop &nbsp; &nbsp; &nbsp; Downloads &nbsp; &nbsp; &nbsp; Movies &nbsp; &nbsp; &nbsp; Pictures<br>
+Documents &nbsp; &nbsp;&nbsp;Library &nbsp; &nbsp; &nbsp; &nbsp; Music &nbsp; &nbsp; &nbsp; &nbsp;Public
+</p>
+<p class="code">$ ls</p>
+<p class="code">mypic.png &nbsp; &nbsp;mypic2.png
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+<div class="contain">
+<div id="ls2" class="anchor"></div>
+<h3>ls -a</h3>
+<div class="left">
+
+<p class="example"><span class="command">ls -a</span> is the command to list all files and directories including hidden files and directories.</p>
+<p class="syntax">Syntax: </p><span class="text"> ls -a <em>source</em></span>
+<p class="example">In the example, the hidden items have a period before them.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls -a</p>
+<p class="code">. &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;.DS_Store &nbsp; &nbsp; &nbsp; mypic2.png &nbsp; &nbsp; &nbsp; mypic.png<br>
+..&nbsp; &nbsp;  &nbsp; &nbsp;&nbsp; .localized
+</p>
+<p class="code">$ ls</p>
+<p class="code">mypic.png &nbsp; &nbsp;mypic2.png
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="ls3" class="anchor"></div>
+<h3>ls -d */</h3>
+<div class="left">
+
+<p class="example"><span class="command">ls -d */</span> is the command to list only directories.</p>
+<p class="syntax">Syntax: </p><span class="text"> ls -d */ <em>source</em></span>
+<p class="example">In the example, use both <span class="command">ls -d */</span> and <span class="command">ls</span> to demonstrate that <span class="command">ls -d */</span> only shows directories.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls -d */</p>
+<p class="code">myfolder/
+</p>
+<p class="code">$ ls</p>
+<p class="code">mypic.png &nbsp; &nbsp; mypic2.png &nbsp; &nbsp; myfolder
+</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="mkdir" class="anchor"></div>
+<h3>mkdir</h3>
+<div class="left">
+
+<p class="example"><span class="command">mkdir</span> is the command to create a directory.</p>
+<p class="syntax">Syntax: </p><span class="text"> ls -d */ <em>source</em></span>
+<p class="example">In the example, I navigated to my desktop and creates a folder named "images" on my desktop. Next, I created a folder named "files" in my home directory.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ cd ~/Desktop</p>
+<p class="code">$ mkdir images</p>
+<p class="code">$ mkdir ../files</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="mount" class="anchor"></div>
+<h3>mount</h3>
+<div class="left">
+
+<p class="example"><span class="command">mount</span> is the command to mount a drive. To mount a drive means to make the drive map to the directory structure of your computer so you can access the content of the drive you are mounting. Drives are found in the dev folder under the root directory. You want to mount it to a folder inside Volumes or Media depending on your mac. </p>
+<p class="syntax">Syntax: </p><span class="text"> mount <em>drive-name mount-location</em></span>
+<p class="example">In the example, I mounted my drive named disk0s4 to the directory myflashdrive. Make sure you create the directory first.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ mount Dev/disks04 Volumes/myflashdrive</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+<div class="contain">
+<div id="mv" class="anchor"></div>
+<h3>mv</h3>
+<div class="left">
+
+<p class="example">The <span class="command">mv</span> command is used to move files or directories to a different location.</p>
+<p class="syntax">Syntax: </p><span class="text"> mv <em>source destination</em></span>
+<p class="example">In the example, I changed my location to my home directory. Next, I moved a directory named "files" to my desktop. Finally, I moved a picture on my desktop to my home directory. The period represents current location.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ cd ~</p>
+<p class="code">$ mv files Desktop</p>
+<p class="code">$ mv Desktop/mypic.png .</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+
+<div class="contain">
+<div id="pwd" class="anchor"></div>
+<h3>pwd</h3>
+<div class="left">
+
+<p class="example">The <span class="command">pwd</span> command is used to print the Terminal's current location.</p>
+<p class="syntax">Syntax: </p><span class="text"> pwd</span>
+<p class="example">In the example, I used <span class="command">pwd</span> to show me that I am in my home directory. I then navigate to my desktop and use <span class="command">pwd</span> again to confirm I am now at my desktop.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne</p>
+<p class="code">$ cd Desktop</p>
+<p class="code">$ pwd</p>
+<p class="code">/Users/Wayne/Desktop</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="rm" class="anchor"></div>
+<h3>rm</h3>
+<div class="left">
+
+<p class="example">The <span class="command">rm</span> command is used to remove file.</p>
+<p class="syntax">Syntax: </p><span class="text"> rm <em>source</em></span>
+<p class="example">In the example, I removed "mypic2.png" and used the  <span class="command">ls</span> command to confirm. </p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls</p>
+<p class="code">images &nbsp;  &nbsp; mypic2.png</p>
+<p class="code">$ rm mypic2.png</p>
+<p class="code">$ ls</p>
+<p class="code">images</p>
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="rmdir" class="anchor"></div>
+<h3>rmdir</h3>
+<div class="left">
+
+<p class="example">The <span class="command">rmdir</span> command is used to remove directory.</p>
+<p class="syntax">Syntax: </p><span class="text"> rmdir <em>source</em></span>
+<p class="example">In the example, I removed "images" and used the  <span class="command">ls</span> command to confirm. <span class="command">ls</span> displays nothing because my directory is empty now.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls</p>
+<p class="code">images</p>
+<p class="code">$ rmdir images</p>
+<p class="code">$ ls</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div class="contain">
+<div id="rm2" class="anchor"></div>
+<h3>rm -r</h3>
+<div class="left">
+
+<p class="example">The <span class="command">rm -r</span> command is used to remove directory and its content. This is the only way to delete a directory that contains subdirectories or files.</p>
+<p class="syntax">Syntax: </p><span class="text"> rm -r <em>source</em></span>
+<p class="example">In the example, I removed the directory "images" which contains two pictures.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ ls</p>
+<p class="code">image.png &nbsp; &nbsp; &nbsp; image2.png</p>
+<p class="code">$ cd ..</p>
+<p class="code">$ rm -r images</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+<div class="contain">
+<div id="wild" class="anchor"></div>
+<h3>*</h3>
+<div class="left">
+
+<p class="example"><span class="command">*</span> represents a wildcard. This means the <span class="command">*</span> character can be used to substitute any character. With this technique, you can perform action on multiple files at once.</p>
+<p class="syntax">Syntax: </p><span class="text"> * </span>
+<p class="example">In the example, I removed all files starting with the letter b.</p>
+
+</div>
+
+<div class="right">
+<p class="code">$ rm b*.*</p>
+
+
+</div>
+<div style="clear:both"></div>
+</div>
+
+
+
+  
+<div style="background-color:gray;position:absolute;bottom:0;width:100%;background-image:url(img/copyright.png);height:25px;">
+  <p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
+    &copy; 2014 by Wayne Chaw 
+  </p>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.getElementById("chart").style.top = window.innerHeight + "px";
+
+
+
+
+
+
+
+$("body").delay(0).animate({"opacity": "1"}, 600);
+
+
+
+
+</script>
+
+
+
+  
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+
+  <script type="text/javascript">
+  skrollr.init({
+    forceHeight: false
+  });
+  </script>
+
+
+
+
+
+<script>
+
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+
+</script>
+
+
+</body>
+</html>

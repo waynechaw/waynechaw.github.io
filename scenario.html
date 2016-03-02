@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+<head>
+  <title>Command Line Interface</title>
+   <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+
+
+
+
+</script>
+
+
+
+
+<style>
+
+
+
+#intro
+{
+background-image: url(img/woman.jpg);
+background-size: cover; 
+position: fixed;
+top: 68px;
+right: 0;
+left:0;
+bottom:0px;
+}
+
+
+
+
+#information
+{
+background-image: url(img/sut.png);
+position:relative;
+z-index: 81;
+border-color:gray;
+padding-bottom:100px;
+text-align: center;
+}
+
+
+body{
+    opacity: 0;
+}
+
+
+#introcontent
+{
+  color:black;
+  padding:40px;
+  text-align: center;
+  font-size: 25px;
+  width:700px;
+  margin:auto;
+  text-align: justify;
+}
+
+
+h1
+{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: center;
+  font-size:75px;
+  margin-top:130px;
+  color:white;
+}
+
+table { 
+  background-color: white;
+  font-family: 'Arial';
+  margin: 25px auto;
+  border-collapse: collapse;
+  border-bottom: 3px solid#7D7D7D;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+     margin-bottom:50px;
+    }
+
+
+  th, td {
+    color: #666666;
+    border: 1px solid #DADADA;
+    padding: 12px 35px;
+  }
+  th {
+    background: #7D7D7D;
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+tr{
+    background-color: white;
+}
+
+tr:hover {
+          background-color: #CCCCCC;
+          cursor: pointer;
+    }
+
+    tr#tablehead:hover {
+          background-color: #CCCCCC;
+          cursor: default;
+    }
+
+
+h2
+{ font-family: 'Alegreya Sans SC', sans-serif;
+
+  text-align: center;
+  font-size: 30px;
+  color: #333329;
+  }
+
+.scenario
+{ color:black;
+  text-align:center;
+font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 25px;
+  margin-bottom:20px;
+}
+
+.example
+{
+  color:black;
+  text-align: justify;
+  margin:25px;
+}
+
+.command{
+  font-weight: 300;
+  color:gray;
+}
+
+.syntax{
+  display:inline-block;
+  text-align: left;
+  color:black;
+    margin-left:25px;
+}
+}
+
+.text{
+  display:inline;
+}
+
+.right{
+  background-image: url('img/deb.png');
+  text-align:left;
+  border:3px #333333 solid;
+  padding:5px;
+  float:right;
+  width:450px;
+  height:280px;
+}
+
+.left{
+    background-image: url('img/orch.png');
+  text-align:left;
+  border:3px #333333 solid;
+  padding:5px;
+  float:left;
+  width:450px;
+  height:280px;
+
+}
+
+.lefttop{
+  text-align:left;
+  border:1px red solid;
+  padding:5px;
+  float:left;
+  width:450px;
+  height:13px;
+  border-style:solid solid hidden solid;
+  border-width:3px;
+  border-color: #333333;
+  text-align:center;
+  font-family: "Andale Mono", AndaleMono, monospace;
+      font-weight:900;
+          background-color:#404040;
+          font-size:15px;
+
+
+}
+
+.righttop{
+  text-align:left;
+  border:1px red solid;
+  padding:5px;
+  float:right;
+  width:450px;
+  height:13px;
+  border-style:solid solid hidden solid;
+    border-width:3px;
+      border-color: #333333;
+    text-align:center;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-weight:900;
+          background-color:#404040;
+                font-size:15px;
+
+
+
+}
+
+.code{
+
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size:12px;
+}
+
+.contain
+{
+  width:950px;margin-left:auto;margin-right:auto;
+}
+
+.anchor
+{
+  height:70px;
+}
+
+
+#container
+{
+
+position:relative;
+
+
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div id="top"></div>
+
+<div id="topcontent">
+
+<img src="img/logo2.png">
+
+<div id="title"> The Command Line Interface</div>
+
+
+<a href="index.html"><div id="link1" class= "link" >HOME</div></a>
+
+<a href="window.html"><div id="link2" class= "link" >  WINDOWS</div></a>
+
+<a href="mac.html"><div id="link3" class= "link">  MAC</div></a>
+
+<a href="scenario.html"><div id="link4" class= "link" > SCENARIOS</div></a>
+
+<a href="http://www.yearup.org/"><div id="link5" class= "link" >  ABOUT</div></a>
+</div>
+
+
+<div id="intro" data-0="background-position:0px 0px;" data-100000="background-position:0px -35000px;">
+
+<h1 class="outline">Scenarios</h1>
+
+<p id="introcontent" class="outline" style="color:white;"> These are sample situations you may need to use the command line. Commands used for both the Command Prompt and the Terminal are given.</p>
+
+</div>
+
+
+
+<div id="container">
+
+
+
+
+
+
+
+<div id="information">
+
+
+<div class="contain">
+
+<div id="cd" class="anchor"></div>
+
+<p class="scenario">You want to delete all your pictures on your desktop.</p>
+
+<div class="lefttop">Command Prompt</div>
+<div class="righttop">Terminal</div>
+<div class="left">
+<p class="code">
+C:\> cd \users\wayne\desktop<br>
+C:\Users\Wayne\Desktop>del *.jpg<br>
+C:\Users\Wayne\Desktop>del *.png
+</p>
+
+</div>
+
+<div class="right">
+<p class="code">
+$ cd<br>
+$ cd Desktop<br>
+$ rm *.jpg<br>
+$ rm *.png
+</p>
+
+</div>
+
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+<div id="cd" class="anchor"></div>
+
+<p class="scenario">You want to move all Microsoft Word documents on desktop into a <br>folder named "documents" that is in your home directory.</p>
+
+<div class="lefttop">Command Prompt</div>
+<div class="righttop">Terminal</div>
+<div class="left">
+<p class="code">
+C:\Users\Wayne\Desktop> move *.doc* ../documents<br>
+</p>
+</div>
+
+<div class="right">
+<p class="code">
+$ mv *.doc* ../documents<br>
+</p>
+</div>
+
+
+<div style="clear:both"></div>
+
+</div>
+
+
+<div class="contain">
+
+<div id="cd" class="anchor"></div>
+
+<p class="scenario">You want make a backup of all your files on your <br>desktop onto a USB drive named "mydrive".</p>
+
+<div class="lefttop">Command Prompt</div>
+<div class="righttop">Terminal</div>
+<div class="left">
+<p class="code">
+C:\Users\Wayne\Desktop> copy *.* d:<br>
+</p>
+</div>
+
+<div class="right">
+<p class="code">
+$ cp *.* /Volumes/mydrive<br>
+</p>
+</div>
+
+
+
+<div style="clear:both"></div>
+
+</div>
+
+
+  
+<div style="background-color:gray;position:absolute;bottom:0;width:100%;background-image:url(img/copyright.png);height:25px;">
+  <p class="copyright" style="text-align:right;margin-right:20px; margin-top:5px;font-size:12px;">
+    &copy; 2014 by Wayne Chaw 
+  </p>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.getElementById("container").style.top = window.innerHeight + "px";
+
+$("body").delay(0).animate({"opacity": "1"}, 600);
+</script>
+  
+<script type="text/javascript" src="skrollr.min.js"></script>
+
+  <script type="text/javascript">
+  skrollr.init({
+    forceHeight: false
+  });
+  </script>
+
+<script>
+
+jQuery(document).ready(function($) {
+      $(".clickableRow").click(function() {
+            window.document.location = $(this).attr("href");
+      });
+});
+
+</script>
+
+</body>
+</html>
